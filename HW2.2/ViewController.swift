@@ -32,22 +32,22 @@ class ViewController: UIViewController {
     // MARK: - IB Actions
     @IBAction func redSliderAction(_ sender: Any) {
         redColorValue.text = String(format: "%.2f", redSliderOutlet.value)
-        mainMonitor.backgroundColor = colorMaimMonitor()
+        mainMonitor.backgroundColor = colorMainMonitor()
     }
     
     @IBAction func greenSliderAction(_ sender: Any) {
         greenColorValue.text = String(format: "%.2f", greenSliderOutlet.value)
-        mainMonitor.backgroundColor = colorMaimMonitor()
+        mainMonitor.backgroundColor = colorMainMonitor()
     }
     
     @IBAction func blueSliderAction(_ sender: Any) {
         blueColorValue.text = String(format: "%.2f", blueSliderOutlet.value)
-        mainMonitor.backgroundColor = colorMaimMonitor()
+        mainMonitor.backgroundColor = colorMainMonitor()
     }
     
     // MARK: - Private Methods
     
-    private func colorMaimMonitor() -> UIColor{
+    private func colorMainMonitor() -> UIColor{
         mainMonitor.backgroundColor = UIColor(displayP3Red: CGFloat(redSliderOutlet.value),
                                               green: CGFloat(greenSliderOutlet.value),
                                               blue: CGFloat(blueSliderOutlet.value),
