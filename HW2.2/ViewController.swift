@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     // MARK: - IBOutlets
     
     @IBOutlet weak var mainMonitor: UIView!
@@ -22,7 +22,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var greenSliderOutlet: UISlider!
     @IBOutlet weak var blueSliderOutlet: UISlider!
     
-    
     // MARK: - Override Methods
     
     override func viewDidLoad() {
@@ -32,14 +31,31 @@ class ViewController: UIViewController {
     
     // MARK: - IB Actions
     @IBAction func redSliderAction(_ sender: Any) {
-        redColorValue.text = String(redSliderOutlet.value)
+        redColorValue.text = String(format: "%.2f", redSliderOutlet.value)
+        mainMonitor.backgroundColor = colorMaimMonitor()
     }
     
-//    @IBAction func greenSliderAction(_ sender: Any) {
-//    }
-//    
-//    @IBAction func blueSliderAction(_ sender: Any) {
-//    }
+    @IBAction func greenSliderAction(_ sender: Any) {
+        greenColorValue.text = String(format: "%.2f", greenSliderOutlet.value)
+        mainMonitor.backgroundColor = colorMaimMonitor()
+    }
+    
+    @IBAction func blueSliderAction(_ sender: Any) {
+        blueColorValue.text = String(format: "%.2f", blueSliderOutlet.value)
+        mainMonitor.backgroundColor = colorMaimMonitor()
+    }
+    
+    // MARK: - Private Methods
+    
+    private func colorMaimMonitor() -> UIColor{
+        mainMonitor.backgroundColor = UIColor(displayP3Red: CGFloat(redSliderOutlet.value),
+                                              green: CGFloat(greenSliderOutlet.value),
+                                              blue: CGFloat(blueSliderOutlet.value),
+                                              alpha: 1.0)
+        return mainMonitor.backgroundColor ?? UIColor(displayP3Red: 0,
+                                                      green: 0,
+                                                      blue: 0,
+                                                      alpha: 1)
+    }
     
 }
-
