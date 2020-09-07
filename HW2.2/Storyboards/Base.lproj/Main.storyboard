@@ -72,17 +72,17 @@
                                     <action selector="slidersAction" destination="BYZ-38-t0r" eventType="valueChanged" id="tYp-F4-oXy"/>
                                 </connections>
                             </slider>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="Xnd-7u-Tnk" userLabel="Stack View Value">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="Xnd-7u-Tnk" userLabel="Stack View Value">
                                 <rect key="frame" x="93" y="180" width="58" height="132"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zoa-5g-krg">
-                                        <rect key="frame" x="0.0" y="0.0" width="58" height="32"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="58" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uhe-ee-7mS">
-                                        <rect key="frame" x="0.0" y="58" width="58" height="24"/>
+                                        <rect key="frame" x="0.0" y="57" width="58" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                         <nil key="highlightedColor"/>
@@ -178,15 +178,10 @@
                         <viewLayoutGuide key="safeArea" id="oeQ-QH-FGF"/>
                     </view>
                     <navigationItem key="navigationItem" id="e5i-b0-57T">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="YUv-hy-jRE">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="BTU-wi-fMs" userLabel="Custom">
-                                <rect key="frame" x="283" y="11" width="21" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="square.and.pencil" catalog="system"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="oyw-L4-a8i"/>
-                                </connections>
-                            </button>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="square.and.pencil" catalog="system" style="plain" id="YUv-hy-jRE">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="5wN-ql-mbc"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
